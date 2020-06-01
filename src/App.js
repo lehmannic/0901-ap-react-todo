@@ -49,6 +49,8 @@ class App extends React.Component {
 
   clearCompleted = () => {
     this.setState({
+      // filter through todos 
+      // -- returning only the todos where completed === false
       todos: this.state.todos.filter(todo => todo.completed === false)
     })
   }
