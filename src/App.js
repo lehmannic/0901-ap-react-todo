@@ -4,11 +4,11 @@ import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
 
 const todos = [
-  {
-    task: "mow lawn", 
-    id: 1234,
-    completed: false, 
-  }
+  // {
+  //   task: "this is a hard coded task", 
+  //   id: 1234,
+  //   completed: false, 
+  // }
 ]; 
 
 class App extends React.Component {
@@ -29,7 +29,7 @@ class App extends React.Component {
       completed: false, 
     }
     this.setState({
-      todos: [...this.state.todos, newTodo]
+      todos: [newTodo, ...this.state.todos]
     })
   }
 
@@ -47,6 +47,12 @@ class App extends React.Component {
     })
   }
 
+  clearCompleted = () => {
+    this.setState({
+      todos: this.state.todos.filter(todo => todo.completed === false)
+    })
+  }
+
   render() {
     return (
       <div>
@@ -59,6 +65,7 @@ class App extends React.Component {
         <TodoList
           todos={this.state.todos}
           toggleCompleted={this.toggleCompleted}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     );
