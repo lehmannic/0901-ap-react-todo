@@ -8,13 +8,14 @@ class TodoForm extends React.Component {
     };
   }
 
+  // update state with each keystroke
   handleChanges = (e) => {
-    // update state with each keystroke
     this.setState({
       task: e.target.value,
     });
   };
 
+  // calls addTodo when submitted and resets input form state
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state.task);

@@ -33,6 +33,7 @@ class App extends React.Component {
     };
   }
 
+  // adds a Todo using setState and spreading in old todos array and adding another
   addTodo = (newTask) => {
     const newTodo = {
       task: newTask,
@@ -44,6 +45,7 @@ class App extends React.Component {
     });
   };
 
+  // toggles completed of todo with matched id (id comes from click handler on todo div)
   toggleTodo = (todoId) => {
     this.setState({
       todos: this.state.todos.map((todo) => {
@@ -59,6 +61,7 @@ class App extends React.Component {
     });
   };
 
+  // filters out all todos where completed = true
   clearCompleted = () => {
     this.setState({
       todos: this.state.todos.filter((todo) => todo.completed !== true),
