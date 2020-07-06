@@ -1,0 +1,19 @@
+.todo-container {
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+  padding: 2%;
+  margin-bottom: 2%;
+  background-color: white;
+
+  min-width: 21%;
+}
+
+.todo-container:hover {
+  cursor: pointer;
+}
+
+.todo.completed {
+  color: rgb(60, 60, 60);
+  text-decoration: line-through;
+}

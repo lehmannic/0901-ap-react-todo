@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  text-align: center; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.app{
+  display: flex; 
+}
+
+.form-container{
+  width: 50%; 
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+  margin: 4% auto 0%;
+  padding: 4%;
+  background-color: white;
+
+  display: flex; 
+  flex-direction: column;
+}
+
+.TodoList-container{
+  display: flex; 
+  flex-wrap: wrap; 
+  margin: 2% 0 2%; 
+  justify-content: space-evenly;
+}
